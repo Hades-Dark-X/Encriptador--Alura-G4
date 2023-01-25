@@ -53,9 +53,6 @@ function desencriptarTexto() {
   }
 }
 
-function copiarTexto() {
-  let areaTexto = document.getElementById("areaEncriptado");
-  areaTexto.select();
-  document.execCommand("copy");
-  alert("Texto copiado al portapapeles");
+function copiarTexto(){
+  navigator.clipboard.writeText(areaEncriptado.value);
 }
